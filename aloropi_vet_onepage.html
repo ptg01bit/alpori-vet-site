@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aloropi Veterinary Center</title>
+  <style>
+    :root {
+      --primary: #3A8D8E;
+      --secondary: #6CC3C2;
+      --light: #F7FCFC;
+      --dark: #013A3A;
+      --max-width: 1100px;
+    }
+    * {box-sizing:border-box;margin:0;padding:0;font-family:Helvetica,Arial,sans-serif;scroll-behavior:smooth;}
+    body {background:var(--light);color:var(--dark);}
+    header {background:var(--primary);padding:1rem 2rem;position:fixed;width:100%;top:0;z-index:999;box-shadow:0 2px 6px rgba(0,0,0,.1);} 
+    nav {display:flex;justify-content:space-between;align-items:center;max-width:var(--max-width);margin:auto;}
+    nav a.logo {color:#fff;font-size:1.5rem;font-weight:bold;text-decoration:none;}
+    ul {list-style:none;display:flex;gap:1.5rem;}
+    ul li a {color:#fff;text-decoration:none;font-weight:500;transition:opacity .3s;}
+    ul li a:hover {opacity:.7;}
+    section {padding:6rem 1.5rem 4rem;max-width:var(--max-width);margin:auto;}
+    .hero {padding-top:8rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.5rem;}
+    .hero h1 {font-size:2.5rem;line-height:1.2;color:var(--primary);} 
+    .hero p {font-size:1.1rem;max-width:600px;}
+    .btn {background:var(--secondary);color:#fff;padding:.75rem 1.5rem;border:none;border-radius:8px;font-size:1rem;text-decoration:none;cursor:pointer;transition:background .3s;}
+    .btn:hover {background:#55a4a3;}
+    .grid {display:grid;gap:2rem;}
+    /* About */
+    #about .grid {grid-template-columns:repeat(auto-fit,minmax(250px,1fr));align-items:center;}
+    #about img {width:100%;border-radius:12px;}
+    /* Services */
+    #services .card {background:#fff;padding:1.5rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.05);text-align:center;transition:transform .3s;}
+    #services .card:hover {transform:translateY(-5px);} 
+    #services .card h3 {margin:1rem 0 .5rem;}
+    /* Testimonials */
+    #testimonials blockquote {background:#fff;padding:1.5rem;border-left:5px solid var(--secondary);border-radius:0 12px 12px 0;margin-bottom:1rem;}
+    #testimonials cite {display:block;margin-top:.5rem;font-style:normal;font-weight:bold;color:var(--primary);} 
+    /* Team */
+    #team .member {text-align:center;}
+    #team img {width:160px;height:160px;border-radius:50%;object-fit:cover;margin-bottom:1rem;}
+    /* Contact */
+    #contact form {display:grid;gap:1rem;background:#fff;padding:2rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.05);} 
+    input, textarea {padding:.75rem;border:1px solid #ccc;border-radius:6px;font-size:1rem;width:100%;}
+    textarea {resize:vertical;min-height:120px;}
+    footer {background:var(--dark);color:#fff;text-align:center;padding:1.5rem 1rem;}
+    @media(min-width:700px){
+      .hero {flex-direction:row;text-align:left;gap:3rem;}
+      .hero img {width:50%;border-radius:12px;}
+      .hero h1 {font-size:3rem;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <a href="#" class="logo">Aloropi Vet</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div>
+      <h1>Compassionate Care, <br>Advanced Medicine</h1>
+      <p>At Aloropi Veterinary Center, we treat your pets like family, providing state-of-the-art veterinary services with warmth and dedication.</p>
+      <a href="#contact" class="btn">Book an Appointment</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1558944351-c1a9caa1a9b7?auto=format&fit=crop&w=800&q=80" alt="Vet with dog and cat">
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="grid">
+      <img src="https://images.unsplash.com/photo-1601758261025-0c3681c43a64?auto=format&fit=crop&w=700&q=80" alt="Clinic interior">
+      <div>
+        <p>Founded in 2015, Aloropi Veterinary Center has become a trusted destination for pet owners seeking compassionate and professional veterinary care. Our mission is simple: to enhance the health and happiness of every animal that walks through our doors.</p>
+        <p>We leverage cutting‑edge technology and evidence‑based medicine, all while maintaining a gentle, personalized approach for each pet.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+      <div class="card">
+        <h3>Wellness Exams</h3>
+        <p>Comprehensive health check‑ups to keep your pets thriving year‑round.</p>
+      </div>
+      <div class="card">
+        <h3>Vaccinations</h3>
+        <p>Core and lifestyle vaccines to protect against common diseases.</p>
+      </div>
+      <div class="card">
+        <h3>Diagnostics</h3>
+        <p>On‑site lab tests, X‑rays, and ultrasound for rapid, accurate results.</p>
+      </div>
+      <div class="card">
+        <h3>Surgery</h3>
+        <p>From spays and neuters to advanced soft‑tissue and orthopedic procedures.</p>
+      </div>
+      <div class="card">
+        <h3>Dental Care</h3>
+        <p>Cleanings, extractions, and preventative care for healthy smiles.</p>
+      </div>
+      <div class="card">
+        <h3>Emergency Care</h3>
+        <p>Urgent treatment when your pet needs it most—during clinic hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <blockquote>
+      "The team at Aloropi treated Bella like their own. We wouldn't go anywhere else!"
+      <cite>— Sarah K.</cite>
+    </blockquote>
+    <blockquote>
+      "Fast diagnostics and compassionate staff saved Max's life. Forever grateful!"
+      <cite>— Daniel R.</cite>
+    </blockquote>
+  </section>
+
+  <!-- Team -->
+  <section id="team">
+    <h2>Meet Our Team</h2>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));">
+      <div class="member">
+        <img src="https://images.unsplash.com/photo-1529625050061-2ab4a4b67f14?auto=format&fit=crop&w=400&q=80" alt="Dr. Sophia Patel">
+        <h3>Dr. Sophia Patel</h3>
+        <p>Chief Veterinarian</p>
+      </div>
+      <div class="member">
+        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=400&q=80" alt="Dr. Miguel Silva">
+        <h3>Dr. Miguel Silva</h3>
+        <p>Surgical Specialist</p>
+      </div>
+      <div class="member">
+        <img src="https://images.unsplash.com/photo-1559839734-4b2b9f262d78?auto=format&fit=crop&w=400&q=80" alt="Nurse Emma Wong">
+        <h3>Emma Wong</h3>
+        <p>Senior Vet Nurse</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Fill out the form below or call us at <strong>(123) 456‑7890</strong>.</p>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="How can we help?" required></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Aloropi Veterinary Center. All rights reserved.</p>
+  </footer>
+</body>
+</html>
